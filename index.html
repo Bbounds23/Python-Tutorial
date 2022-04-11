@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Python Tutorial</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+  <nav id="navbar">
+  <header><img
+            src="assets/icons/icons8-pythonone.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /></header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Python Introduction</a></li>
+    <li>
+      <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+    </li>
+    <li>
+      <a class="nav-link" href="#python2_3">Python 2 and Python 3</a>
+    </li>
+    <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+    <li><a class="nav-link" href="#Variables">Variables</a></li>
+    <li>
+      <a class="nav-link" href="#data_types">Data Types</a>
+    </li>
+    <li><a class="nav-link" href="#Casting">Casting</a></li>
+    <li><a class="nav-link" href="#Strings">Strings</a></li>
+    <li><a class="nav-link" href="#Boolean">Boolean</a></li>
+    <li><a class="nav-link" href="#Lists">Lists</a></li>
+    <li><a class="nav-link" href="#Tuples">Tuples</a></li>
+    <li><a class="nav-link" href="#Dictionaries">Dictionaries</a></li>
+    <li>
+      <a class="nav-link" href="#if...else_statement">if...else statement</a>
+    </li>
+    <li><a class="nav-link" href="#while_statement">while statement</a></li>
+    <li>
+      <a class="nav-link" href="#Functions">Functions</a>
+    </li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>
+        Python is an interpreted, object-oriented, high-level programming language
+         with dynamic semantics developed by Guido van Rossum. It was originally
+          released in 1991. Designed to be easy as well as fun, the name
+           "Python" is a nod to the British comedy group Monty Python.
+      </p>
+
+      <p>
+        Its high-level built in data structures, combined with dynamic typing
+        and dynamic binding, make it very attractive for Rapid Application Development,
+        as well as for use as a scripting or glue language to connect existing
+        components together. Python's standard library supports many things:
+      </p>
+      <ul>
+        <li>
+          HTML and XML
+        </li>
+        <li>
+          JSON
+        </li>
+        <li>FTP,HTTP, IMAP, SSH2, easy-to-use socket interface</li>
+
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="What_you_should_already_know">
+    <header>What you should already know</header>
+    <article>
+      <p>This guide assumes you have the following basic background:</p>
+
+      <ul>
+        <li>
+          A general understanding of programming.
+        </li>
+        <li>How to work a computer</li>
+        <li>
+          You already have a python IDE installed.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="python2_3">
+    <header>Python 2 and Python 3</header>
+    <article>
+      <p>
+        Programming communities appreciate Python for its general-purpose
+        functionality. Despite not being around for too long, the open-source
+        language has evolved into an efficient, readable language meant to
+        streamline the web development process. This evolution has taken Python
+        through multiple versions, including the two most recent, Python 2 and Python 3.
+      </p>
+
+      <p>
+      Python 2 and Python 3 have a few key distinctions. Syntax is the major one,
+      like with the print function. Print “hello” in Python 2 becomes print
+      (“hello”) in Python 3. While the addition of some parentheses doesn’t seem
+      too significant, in this context, it changes print from a statement to a
+      function. Python 3 has clear, existing commands already built into the code,
+      making it very user-friendly.
+      </p>
+      <p>
+        The type of default text strings is another difference. Python 2 uses
+         ASCII—a method of encoding English characters with an assigned number.
+          While functional, ASCII remains 7-bit, meaning it does not encompass a
+          broad range of symbols. On the other hand, Python 3 uses Unicode, which
+          is the practical UTF-8 (Unicode Transformation Format – 8-bit).
+          This gives it the ability to represent foreign languages and other widely
+           used symbols and emojis.
+      </p>
+      <p>
+        As for libraries, Python 2 is not forwards-compatible like Python 3 is.
+        Not only does this incompatibility prevent the usage of Python 2 for newer
+         versions, but it also complicates the process of porting Python 2 libraries
+          to Python 3. If you are just starting at Python, this isn’t something to
+          worry about just yet. Porting is left for more advanced programmers.
+          Python 3’s libraries are backward-incompatible, so the language is
+          geared towards future improvements.
+      </p>
+      <p>
+        This guide will be using Python 3.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Hello_world">
+    <header>Hello world</header>
+    <article>
+      To get started with writing Python, open your IDE and write your
+      first "Hello world" Python code:
+      <code>print("Hello World!")
+      </code>
+
+      Save and run, and watch your program output "Hello World"!
+    </article>
+  </section>
+  <section class="main-section" id="Variables">
+    <header>Variables</header>
+    <article>
+    <p>
+      You use variables as symbolic names for values in your application. The
+      names of variables, called identifiers, conform to certain rules. A variable
+      is created the moment you first assign a value to it.
+    </p>
+    <code> x = 5 </code>
+    <p>
+      Variables do not need to be declared with any particular type, and can
+       even change type after they have been set.
+    </p>
+    <code> x = 4
+          x = "sally"
+    </code>
+    <p>
+      If you want to specify the data type of a variable, this can be done with casting.
+    </p>
+    <code> x = str(3) #x will be '3' instead of 3</code>
+    <p>Variable names are case-sensitive.</p>
+    <code>a = 4
+      A = "Sally"
+      # A will not overwrite a
+    </code>
+    </article>
+  </section>
+  <section class="main-section" id="data_types">
+    <header>Data Types</header>
+    <article>
+      You can declare a variable in three ways:
+      <p>In programming, data type is an important concept. Variables can
+        store data of different types, and different types can do different things.
+        Python has the following data types built-in by default, in these categories:</p>
+        <pre>
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview</pre>
+    </article>
+  </section>
+  <section class="main-section" id="Casting">
+    <header>Casting</header>
+    <article>
+      <p>
+        There may be times when you want to specify a type on to a variable.
+        This can be done with casting. Python is an object-orientated language,
+        and as such it uses classes to define data types, including its primitive types.
+      </p>
+      <p>Casting in python is therefore done using constructor functions:</p>
+      <ul>
+        <li>int() - constructs an integer number from an integer literal, a float
+          literal (by removing all decimals), or a string literal
+          (providing the string represents a whole number)</li>
+        <li>float() - constructs a float number from an integer literal, a float
+          literal or a string literal (providing the string represents a float or an integer)</li>
+        <li>str() - constructs a string from a wide variety of data types,
+          including strings, integer literals and float literals</li>
+      </ul>
+      <code>x = int(1)   # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3</code>
+
+    </article>
+  </section>
+  <section class="main-section" id="Strings">
+    <header>Strings</header>
+    <article>
+      <p>
+        Strings in python are surrounded by either single quotation marks, or double quotation marks.
+        'hello' is the same as "hello".
+        You can display a string literal with the print() function:
+      </p>
+      <code>print("Hello")
+print('Hello')</code>
+      <p>
+        Assigning a string to a variable is done with the variable name followed by an equal sign and the string:
+      </p>
+      <code>a = "Hello"
+print(a)</code>
+      <p>To get the length of a string, use the len() function.</p>
+      <code>a = "Hello, World!"
+print(len(a))</code>
+      <p>You can return a range of characters by using the slice syntax. Specify
+        the start index and the end index, separated by a colon, to return a part of the string.</p>
+      <code>b = "Hello, World!"
+print(b[2:5])</code>
+      <p>The format() method takes the passed arguments, formats them, and places
+        them in the string where the placeholders {} are:</p>
+      <code>age = 36
+txt = "My name is John, and I am {}"
+print(txt.format(age))</code>
+
+    </article>
+  </section>
+  <section class="main-section" id="Boolean">
+    <header>Boolean Values</header>
+    <article>
+      <p>
+        In programming you often need to know if an expression is True or False.
+
+You can evaluate any expression in Python, and get one of two answers, True or False.
+
+When you compare two values, the expression is evaluated and Python returns the Boolean answer:
+      </p>
+
+      <code>print(10 > 9) #true
+print(10 == 9) #false</code>
+      <p>
+        When you run a condition in an if statement, Python returns True or False:
+      </p>
+      <code>if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")</code>
+      <p>
+        The bool() function allows you to evaluate any value, and give you True or False in return,
+      </p>
+
+      <p>
+        Almost any value is evaluated to True if it has some sort of content.
+
+Any string is True, except empty strings.
+
+Any number is True, except 0.
+
+Any list, tuple, set, and dictionary are True, except empty ones.  The following
+will return True:
+      </p>
+
+      <code>bool("abc")
+bool(123)
+bool(["apple", "cherry", "banana"])</code>
+      <p>Python also has many built-in functions that return a boolean value,
+        like the isinstance() function, which can be used to determine if an object is of a certain data type:
+</p>
+      <code>x = 200
+print(isinstance(x, int))</code>
+    </article>
+  </section>
+  <section class="main-section" id="Lists">
+    <header>Lists</header>
+    <article>
+      <p>Lists are used to store multiple items in a single variable.</p>
+      <p>Lists are created using square brackets:</p>
+      <code>mylist = ["apple", "banana", "cherry"]</code>
+      <p>List items are indexed, the first item has index [0], the second item has index [1] etc.</p>
+      <code>thislist = ["apple", "banana", "cherry"]
+print(thislist[1]) #prints "banana"</code>
+      <p>You can specify a range of indexes by specifying where to start and where to end the range.</p>
+      <p>When specifying a range, the return value will be a new list with the specified items.</p>
+      <code>thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])</code>
+      <p>To change the value of a specific item, refer to the index number:</p>
+      <code>thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"</code>
+      <p>To insert a new list item, without replacing any of the existing values, we can use the insert() method.</p>
+      <code>thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")</code>
+      <p>To add an item to the end of the list, use the append() method:</p>
+      <code>thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")</code>
+      <p>The remove() method removes the specified item.</p>
+      <code>thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")</code>
+    </article>
+  </section>
+  <section class="main-section" id="Tuples">
+    <header>Tuples</header>
+    <article>
+      <p>Tuples are used to store multiple items in a single variable.</p>
+
+      <p>Tuple is one of 4 built-in data types in Python used to store collections
+         of data, the other 3 are List, Set, and Dictionary, all with different qualities and usage.</p>
+
+      <p>A tuple is a collection which is ordered and unchangeable.</p>
+
+      <p>Tuples are written with round brackets. To create a tuple:</p>
+      <code>thistuple = ("apple", "banana", "cherry")</code>
+    </article>
+  </section>
+  <section class="main-section" id="Dictionaries">
+    <header>Dictionaries</header>
+    <article>
+      <p>Dictionaries are used to store data values in key:value pairs.</p>
+      <code>thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}</code>
+    </article>
+  </section>
+  <section class="main-section" id="if...else_statement">
+    <header>if...else statement</header>
+    <article>
+      <p>Python supports the usual logical conditions from mathematics:
+
+Equals:<code> a == b </code>
+Not Equals:<code> a != b</code>
+Less than:<code> a < b</code>
+Less than or equal to:<code> a <= b</code>
+Greater than:<code> a > b</code>
+Greater than or equal to:<code> a >= b</code>
+These conditions can be used in several ways, most commonly in "if statements" and loops.
+
+An "if statement" is written by using the if keyword.</p>
+
+      <code>a = 33
+b = 200
+if b > a:
+  print("b is greater than a")</code>
+  <p>The else keyword catches anything which isn't caught by the preceding conditions.</p>
+  <code>a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")</code>
+    </article>
+  </section>
+  <section class="main-section" id="while_statement">
+    <header>while statement</header>
+    <article>
+      A while statement executes its statements as long as a specified condition
+      evaluates to true. A while statement looks as follows:
+
+      <code>i = 1
+while i < 6:
+  print(i)
+  i += 1</code> If the condition becomes false,
+      statement within the loop stops executing and control passes to the
+      statement following the loop.
+
+      <p>
+        The condition test occurs before statement in the loop is executed. If
+        the condition returns true, statement is executed and the condition is
+        tested again. If the condition returns false, execution stops and
+        control is passed to the statement following while.
+      </p>
+
+
+    </article>
+  </section>
+  <section class="main-section" id="Functions">
+    <header>Function declarations</header>
+    <article>
+      A function definition (also called a function declaration, or function
+      statement) consists of the <code>def</code> keyword.
+      <code>def my_function():
+  print("Hello from a function")</code>
+      <header>Calling a function</header>
+      <p>To call a function, use the function name followed by parenthesis:</p>
+      <code>def my_function():
+  print("Hello from a function")
+
+my_function()</code>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a href="https://www.w3schools.com/python/default.asp" target="_blank">W3</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+</body>
+</html>
